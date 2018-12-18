@@ -1,0 +1,8 @@
+Oregon 1047001 2
+Benton 5300 100002 25000 1 Corvallis
+Lane 80001 50001 15000 2 Eugene Springfield
+South_Carolina 1069002 3
+Anderson 80002 100001 80000 2 Anderson Pendleton
+Pickens 5000 50002 20000 2 Clemson Pickens
+A_test_county 4 4 4 4 this is a test 
+South_Test_State 9009 0
