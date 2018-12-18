@@ -1,0 +1,27 @@
+Jonathan Ropp
+CS 261 - Assignment 2 Part 3
+1/28/17
+
+1. 	We have an empty array of capacity 8 and want to push to the array 16 times. We 
+	start out with a cost of 8 units when filling up the original array. For the 9th
+	push, it becomes 8+1 and the array capacity is doubled to 16. Then filling the rest
+	of the new array costs just 7, 1 for each push without a realloc. This comes out to:
+    8+(8+1)+7 = 24.
+	
+	If we have the same situation, but have 32 pushes, the cost becomes:
+	8+(8+1)+7+(16+1)+15 = 56.
+	
+	For N number of pushes, the pushes are O(1) unless it is the n+1 push (where
+	n is the size of the array) in which case that push is O(n). This comes out to 
+	O(n+1/n) which is averaged out to be O(1). 
+	
+	
+2. 	If we have a situation similar to above, but the array only resizes by adding 2 
+	spaces to the array when needed, 16 pushes on the initially empty array results in:
+	8+(8+1)+1+(10+1)+1+(12+1)+1+(14+1)+1 = 60
+	
+	For 32 pushes, we follow the same pattern:
+	8+(8+1)+1+(10+1)+ ... +1+(30+1)+1 = 260
+	
+	Because this situation requires that the array is resized at a constant pace (increase 
+	capacity by 2 each resize), this changes the time complexity to be O(n).
